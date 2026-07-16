@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5e6d3 0%, #e8d5b7 100%);
+    text-align: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #5a3e2b;
+    padding: 1.5rem 0 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+#turn-indicator {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #7a5c42;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box {
+    background-color: antiquewhite;
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+    font-size: 8vmin;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.box:hover:not(:disabled) {
+    background-color: #f0dcc0;
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.3);
+    transform: scale(1.05);
+}
+
+.box:active:not(:disabled) {
+    transform: scale(0.97);
+}
+
+.x-mark {
+    color: crimson;
+}
+
+.o-mark {
+    color: steelblue;
+}
+
+#reset-btn, #new-btn {
+    padding: 0.75rem 1.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    background-color: crimson;
+    color: white;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+#reset-btn:hover, #new-btn:hover {
+    background-color: #a50000;
+    transform: scale(1.03);
+}
+
+#reset-btn:active, #new-btn:active {
+    transform: scale(0.97);
+}
+
+#msg {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #5a3e2b;
+}
+
+.msg-container {
+    height: 80vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+.hide {
+    display: none;
+}
